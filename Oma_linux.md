@@ -1,20 +1,18 @@
-<h1>Raportin kirjoittaminen:</h1>
+Raportin kirjoittaminen:
 - Raportissa kerrotaan mitä tehtiin, ja mitä sen seurauksena tapahtui
 - Mikäli joku muu toistaa raportissasi tehtävät toimenpiteet, heidän pitäisi päästä samaan lopputulokseen kuin sinä
 - Täsmällisyys ja selkeä teksti ovat tärkeitä
 
-<h1>What is Free software?</h1>
+What is Free software?
 - Käyttäjillä on oikeus käyttää, kopioida, jakaa, tutkia, muuttaa ja parantaa ohjelmistoa niin kuin he haluavat
 - Mikäli ohjelmisto ei anna käyttäjille kaikkia näitä vapauksia, sitä ei voi kutsua vapaaksi ohjelmistoksi
 - Vapaa, ei välttämättä ilmainen
 - Vapaan ohjelmiston pitää olla käytettävissä myös kaupallisesti
 
-<h1>Linuxin asennus</h1>
-<p>Tässä raportissa käyn läpi Linuxin asentamisen Oracle Virtualbox virtuaalikoneelle. Käyttämäni Virtualbox on versio 7.0.10.</p>
-<p>Ympäristönä toimii W10 versio 10.0.19045, ja oleelliset tiedot raudasta ovat:
-<ul>Prosessori: AMD Ryzen 7</ul>
-<ul>RAM: 16GB</ul>
-<ul>Muisti: </ul>
+Linuxin asennus
+Tässä raportissa käyn läpi Linuxin asentamisen Oracle Virtualbox virtuaalikoneelle. Käyttämäni Virtualbox versio on 7.0.10.
+Ympäristönä toimii W10 versio 10.0.19045, ja oleelliset tiedot raudasta ovat:
+- Prosessori: AMD Ryzen 7
+- RAM: 16GB
 
-
-</p>
+Latasin raporttiin käytettävän Linux version täältä: https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-12.1.0-amd64-xfce.iso
