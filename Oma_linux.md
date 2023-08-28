@@ -16,3 +16,6 @@ Ympäristönä toimii W10 versio 10.0.19045, ja oleelliset tiedot raudasta ovat:
 - RAM: 16GB
 
 Latasin raporttiin käytettävän Linux version täältä: https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-12.1.0-amd64-xfce.iso
+
+Ladattuani Debianin .iso-tiedoston, käynnistin Virtualboxin, ja aloitin uuden virtuaalikoneen luomisen painamalla "New". Nimesin virtuaalikoneen "DebianOskuHeikkinen" ja valitsin ladatun .iso-tiedoston.
+![Virtual machine creation](debian1.png)
