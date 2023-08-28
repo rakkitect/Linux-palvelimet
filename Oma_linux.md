@@ -17,5 +17,6 @@ Ympäristönä toimii W10 versio 10.0.19045, ja oleelliset tiedot raudasta ovat:
 
 Latasin raporttiin käytettävän Linux version täältä: https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-12.1.0-amd64-xfce.iso
 
-Ladattuani Debianin .iso-tiedoston, käynnistin Virtualboxin, ja aloitin uuden virtuaalikoneen luomisen painamalla "New". Nimesin virtuaalikoneen "DebianOskuHeikkinen" ja valitsin ladatun .iso-tiedoston.
-![Virtual machine creation](debian1.png)
+Ladattuani Debianin .iso-tiedoston, käynnistin Virtualboxin, ja aloitin uuden virtuaalikoneen luomisen painamalla "New". Nimesin virtuaalikoneen "DebianOskuHeikkinen" ja valitsin ladatun .iso-tiedoston. Valitsin täpän "Skip Unattended Installation" ja jatkaakseni painoin "Expert Mode", sillä ilmeisesti muuten asennus ei onnistu (lähde: https://terokarvinen.com/2021/install-debian-on-virtualbox/)
+
+
