@@ -43,4 +43,20 @@ Käynnistettyäni virtuaalikoneen, tuli näkyviin bootloader josta valitsin "Liv
 
 ![Virtual Machine Creation](https://github.com/rakkitect/Linux-palvelimet/blob/main/debian5.png)
 
+Koneen käynnistyttyä kokeilin selainta, ja se toimi niinkuin pitikin joten etenin asentamaan käyttöjärjestelmää laukaisemalla työpöydältä "Install Debian". Jouduin suorittamaan lopullisen asennuksen ilman virtalähdettä, ja ilmeni varoitus että kaikki toiminnot eivät ole käytössä.
+
+Seuraavaksi luettelen tekemäni valinnat/muutokset asennuksen aikana. Mikäli jotain ei ole mainittu niin olen valinnut oletuksena olevan valinnan.
+
+- Kieli: American English
+- Lokaatio: Suomi (valittu painamalla karttaa)
+- Näppäimistö: Generic 105-key PC)
+- Erase disk: Kyllä
+- Käyttäjän nimi: Osku Heikkinen
+- Käyttäjä: oskuh
+
+Yhteenvedon jälkeen maksimoin virtuaalikoneen sisäisen ruudun, ja painoin "Install"
+
+![Virtual Machine Creation](https://github.com/rakkitect/Linux-palvelimet/blob/main/debian6.png)
+
+Vaikka tietokoneeni ei ollut virtalähteessä, asennus meni läpi ilman mitään ongelmia.
 
