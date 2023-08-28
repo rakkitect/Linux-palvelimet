@@ -1,15 +1,18 @@
-Raportin kirjoittaminen:
+# H1 - Oma Linux tehtäväraportti
+
+# Raportin kirjoittaminen:
 - Raportissa kerrotaan mitä tehtiin, ja mitä sen seurauksena tapahtui
 - Mikäli joku muu toistaa raportissasi tehtävät toimenpiteet, heidän pitäisi päästä samaan lopputulokseen kuin sinä
 - Täsmällisyys ja selkeä teksti ovat tärkeitä
 
-What is Free software?
+# What is Free software?
 - Käyttäjillä on oikeus käyttää, kopioida, jakaa, tutkia, muuttaa ja parantaa ohjelmistoa niin kuin he haluavat
 - Mikäli ohjelmisto ei anna käyttäjille kaikkia näitä vapauksia, sitä ei voi kutsua vapaaksi ohjelmistoksi
 - Vapaa, ei välttämättä ilmainen
 - Vapaan ohjelmiston pitää olla käytettävissä myös kaupallisesti
 
-Linuxin asennus
+# Linuxin asennus
+
 Tässä raportissa käyn läpi Linuxin asentamisen Oracle Virtualbox virtuaalikoneelle. Käyttämäni Virtualbox versio on 7.0.10.
 Ympäristönä toimii W10 versio 10.0.19045, ja oleelliset tiedot raudasta ovat:
 - Prosessori: AMD Ryzen 7
