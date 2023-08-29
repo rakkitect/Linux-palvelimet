@@ -14,7 +14,7 @@
 # Linuxin asennus
 
 Tässä raportissa käyn läpi Linuxin asentamisen Oracle Virtualbox virtuaalikoneelle. Käyttämäni Virtualbox versio on 7.0.10.
-Ympäristönä toimii W10 versio 10.0.19045, ja oleelliset tiedot raudasta ovat:
+Ympäristönä toimii Lenovo Ideapad 5 Pro-14ACN6 jossa on W10 versio 10.0.19045, ja oleelliset tiedot raudasta ovat:
 - Prosessori: AMD Ryzen 7 5800U with Radeon Graphics, 1903 Mhz, 8 Core(s), 16 Logical Processor(s)
 - BIOS Versio: LENOVO GECN34WW(V1.18), 10/04/2023
 - RAM: 16GB, DDR4, 3200 Mhz
