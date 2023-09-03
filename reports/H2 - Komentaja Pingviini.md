@@ -72,5 +72,6 @@ d) FHS - Filesystem Hierarchy Standard
 
 ![logs](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/logs.png)
 
+e)
 
 
