@@ -27,15 +27,15 @@ Ladattuani Debianin .iso-tiedoston, käynnistin Virtualboxin, ja aloitin uuden v
 
 Valitsin täpän "Skip Unattended Installation" ja jatkaakseni painoin "Expert Mode", jotta pääsen valitsemaan 64-bittisen version (lähde: https://terokarvinen.com/2021/install-debian-on-virtualbox/)
 
-![Virtual Machine Creation](https://github.com/rakkitect/Linux-palvelimet/blob/main/Debian0.png)
+![Virtual Machine Creation](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/Debian1.png)
 
 Hardware-valintoja tehdessä muutin muistin määrän 4GB, ja prosessorien määrän pidin yhdessä.
 
-![Virtual Machine Creation](https://github.com/rakkitect/Linux-palvelimet/blob/main/debian2.png)
+![Virtual Machine Creation](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/debian2.png)
 
 Virtuaalista kovalevyä luodessa asetin kovalevyn koon 20GB, ja muuten pidin asetukset oletuksena. Tässä vaiheessa ei annettu vaihtoehtoa asettaa kovalevyä allokoimaan dynaamisesti, joten toivon että se on oletuksena.
 
-![Virtual Machine Creation](https://github.com/rakkitect/Linux-palvelimet/blob/main/debian3.png)
+![Virtual Machine Creation](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/debian3.png)
 
 Näiden valintojen jälkeen painoin "Finish", ja virtuaalikone tuli näkyviin Virtualboxiin vasempaan reunaan.
 
@@ -47,7 +47,7 @@ Käynnistin juuri luodun virtuaalisen koneen valitsemalla sen Virtualboxin vasem
 
 Käynnistettyäni virtuaalikoneen, tuli näkyviin bootloader josta valitsin "Live system (amd64). Valitsemalla live-systeemin voin tarkistaa kaiken toimivan.
 
-![Virtual Machine Creation](https://github.com/rakkitect/Linux-palvelimet/blob/main/debian5.png)
+![Virtual Machine Creation](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/debian5.png)
 
 Koneen käynnistyttyä kokeilin selainta, ja se toimi niinkuin pitikin joten etenin asentamaan käyttöjärjestelmää laukaisemalla työpöydältä "Install Debian". Jouduin suorittamaan lopullisen asennuksen ilman virtalähdettä, ja ilmeni varoitus että kaikki toiminnot eivät ole käytössä.
 
@@ -62,7 +62,7 @@ Seuraavaksi luettelen tekemäni valinnat/muutokset asennuksen aikana. Mikäli jo
 
 Yhteenvedon jälkeen maksimoin virtuaalikoneen sisäisen ruudun, ja painoin "Install"
 
-![Virtual Machine Creation](https://github.com/rakkitect/Linux-palvelimet/blob/main/debian6.png)
+![Virtual Machine Creation](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/debian6.png)
 
 Vaikka tietokoneeni ei ollut virtalähteessä, asennus meni läpi ilman mitään ongelmia.
 
