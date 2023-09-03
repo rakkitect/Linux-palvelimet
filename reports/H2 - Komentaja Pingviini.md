@@ -8,8 +8,8 @@ a) Micro-editorin asennus
 
 Aloitan asennusprosessin päivittämällä Linuxin pakettihakemiston komennolla `sudo apt-get update`, jonka jälkeen syötän komennon `sudo apt-get -y install micro`. 
 
--kuva-
+[Micro-editorin asennus](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/micro_asennus1.png)
 
 Lisäämällä komentoon tuon `-y`-kohdan, käsken komentoriviä vastaamaan kaikkiin "tyhmiin" kysymyksiin kyllä, jolloin asennus käynnistyy heti.
 
--kuva2-
+[Micro-editori käytössä](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/micro_editori.png)
