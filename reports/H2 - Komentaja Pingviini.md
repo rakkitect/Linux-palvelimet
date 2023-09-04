@@ -1,14 +1,14 @@
 <H1>H2 - Komentaja Pingviini</H1>
 
-x) Oma tiivistelmäni Tero Karvisen artikkelista [Command line basics revisited](https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited).
+<h2>x) Command line basics revisited</h2>
 
 - `sudo` komento antaa korkeimmat mahdolliset oikeudet. Sitä tarvitaan kaikkiin komentoihin jotka vaikuttavat järjestelmään kokonaisvaltaisesti. Asetetaan komennon eteen, esim. `sudo apt-get update`
 - joitain komentoja hakemistossa liikkumiseen: `pwd` = tulostaa työskentelyhakemiston, `ls` = listaa tiedostot ja alahakemistot työskentelyhakemistossa
 - Tärkeitä hakemistoja, joita kaikkien pitäisi muistaa ovat juurihakemisto `/`, kaikkien käyttäjien kotihakemisto `/home/` ja `/var/log/` johon tallentuu kirjaukset kaikesta mitä järjestelmässä on tapahtunut
 
-a) Micro-editorin asennus
+<h2>a) Micro-editorin asennus</h2>
 
-Aloitan asennusprosessin päivittämällä Linuxin pakettihakemiston komennolla `sudo apt-get update`, jonka jälkeen syötän komennon `sudo apt-get -y install micro`. 
+Aloitin asennusprosessin päivittämällä Linuxin pakettihakemiston komennolla `sudo apt-get update`, jonka jälkeen syötin komennon `sudo apt-get -y install micro`. 
 
 ![Micro-editorin asennus](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/micro_asennus1.png)
 
@@ -16,7 +16,7 @@ Lisäämällä komentoon tuon `-y`-kohdan, käsken komentoriviä vastaamaan kaik
 
 ![Micro-editori käytössä](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/micro_editori.png)
 
-b) Rauta
+<h2>b) Rauta </h2>
 
 Asensin komentoriviltä "LSHW"-työkalun, jolla pystyy poimia yksityiskohtaista tietoa koneen "raudasta", eli laitteistosta. Tein tämän komennolla `sudo apt-get -y install lshw`
 
@@ -30,7 +30,7 @@ Listauksesta näkee kaiken mitä fyysisessäkin emolevyssä olisi kytkettynä, k
 
 Listauksen mukaan virtuaalikoneeni prosessori on AMD Ryzen 7 5800U ja  RAM-muistia on 4GiB. Ensimmäisen rivin kuvaus paljastaa koneemme olevan VirtualBox virtuaalikone
 
-c) apt
+<h2>c) apt</h2>
 
 Asensin itselleni kolme uutta komentoriviohjelmaa: Googler, Figlet ja Cmatrix. Sain kaikki kolme asennettua yhdellä komennolla: `sudo apt-get install googler figlet cmatrix -y`
 
@@ -44,11 +44,11 @@ Figletin avulla pystyt luoda ASCII tekstibannereita haluamastasi tekstistä.
 
 ![Figlet](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/figlet.png)
 
-Cmatrix mahdollistaa komentorivin käyttämistä näytönsäästäjänä, ja teemana on tietenkin ikoninen sci-fi leffa. Näytön säästäjän saa suljettua painamalla `q` tai `Ctrl + C`
+Cmatrix mahdollistaa komentorivin käyttämistä näytönsäästäjänä, ja teemana on tietenkin ikoninen sci-fi leffa. Näytönsäästäjän saa suljettua painamalla `q` tai `Ctrl + C`
 
 ![Cmatrix](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/cmatrix.png)
 
-d) FHS - Filesystem Hierarchy Standard
+<h2>d) FHS - Filesystem Hierarchy Standard</h2>
 
 / = Linuxin juurihakemisto jonka alla kaikki tiedostot ja hakemistot ovat
 
@@ -74,7 +74,7 @@ d) FHS - Filesystem Hierarchy Standard
 
 ![logs](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/logs.png)
 
-e) The Friendly M
+<h2>e) The Friendly M </h2>
 
 Tässä osiossa näytän muutaman esimerkin `grep`-komennon käytöstä. Tämän komennon avulla etsitään tekstiä ja merkkijonoja määritellystä tiedostosta
 
@@ -90,7 +90,7 @@ Komento `grep -ril 'lorem' ~/paivat/` etsii kaikki tiedostot jotka sisältävät
 
 ![Grep2](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/grep2.png)
 
-f) Pipe
+<h2>f) Pipe </h2>
 
 Putki, eli `|` mahdollistaa kahden komennon yhdistämisen, ja käyttää ensimmäisen tulosta toisen syötteenä.
 
@@ -98,6 +98,6 @@ Esimerkki: Komento `ls -l | more` listaa kaikki tiedostot ja hakemistot nykyises
 
 ![Pipes](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/pipes.png)
 
-g) Tukki
+<h2>g) Tukki </h2>
 
 Minulla oli vaikeuksia ymmärtää tätä tehtävää, joten jätin sen tekemättä.
