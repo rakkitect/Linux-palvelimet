@@ -1,7 +1,9 @@
+<H1>H2 - Komentaja Pingviini</H1>
+
 x) Oma tiivistelmäni Tero Karvisen artikkelista [Command line basics revisited](https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited).
 
 - `sudo` komento antaa korkeimmat mahdolliset oikeudet. Sitä tarvitaan kaikkiin komentoihin jotka vaikuttavat järjestelmään kokonaisvaltaisesti. Asetetaan komennon eteen, esim. `sudo apt-get update`
-- joitain komentoja hakemistossa liikkumiseen: `pwd` = tulostaa työskentelyhakemiston, `ls` = listaa tiedostot työskentelyhakemistossa
+- joitain komentoja hakemistossa liikkumiseen: `pwd` = tulostaa työskentelyhakemiston, `ls` = listaa tiedostot ja alahakemistot työskentelyhakemistossa
 - Tärkeitä hakemistoja, joita kaikkien pitäisi muistaa ovat juurihakemisto `/`, kaikkien käyttäjien kotihakemisto `/home/` ja `/var/log/` johon tallentuu kirjaukset kaikesta mitä järjestelmässä on tapahtunut
 
 a) Micro-editorin asennus
@@ -72,6 +74,30 @@ d) FHS - Filesystem Hierarchy Standard
 
 ![logs](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/logs.png)
 
-e)
+e) The Friendly M
 
+Tässä osiossa näytän muutaman esimerkin `grep`-komennon käytöstä. Tämän komennon avulla etsitään tekstiä ja merkkijonoja määritellystä tiedostosta
 
+Komennolla `grep oskuh /etc/passwd` etsin käyttäjää "oskuh" passwd tiedostosta, joka sijaitsee /etc/ hakemistossa
+
+![Grep1](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/grep1.png)
+
+Komento `grep -ril 'lorem' ~/paivat/` etsii kaikki tiedostot jotka sisältävät sanan "lorem"  hakemistosta "paivat".
+
+- `r` etsii rekursiivisesti
+- `i` tekee hausta kirjainkoosta riippumattoman
+- `l` listaa tiedostojen nimet
+
+![Grep2](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/grep2.png)
+
+f) Pipe
+
+Putki, eli `|` mahdollistaa kahden komennon yhdistämisen, ja käyttää ensimmäisen tulosta toisen syötteenä.
+
+Esimerkki: Komento `ls -l | more` listaa kaikki tiedostot ja hakemistot nykyisestä hakemistosta, ja käyttää niitä `more`-komennon syötteenä. Tämä on hyödyllistä mikäli hakemistossa olisi erittäin paljon tiedostoja, eivätkä ne mahtuisi yhteen ruutuun.
+
+![Pipes](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/pipes.png)
+
+g) Tukki
+
+Minulla oli vaikeuksia ymmärtää tätä tehtävää, joten jätin sen tekemättä.
