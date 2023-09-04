@@ -101,3 +101,6 @@ Esimerkki: Komento `ls -l | more` listaa kaikki tiedostot ja hakemistot nykyises
 <h2>g) Tukki </h2>
 
 Minulla oli vaikeuksia ymmärtää tätä tehtävää, joten jätin sen tekemättä.
+
+<h2>Lähteet:</h2>
+- Karvinen, T. Command Line Basics Revisited 2020, Luettavissa: https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited
