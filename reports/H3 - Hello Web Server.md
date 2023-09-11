@@ -48,7 +48,13 @@ Tämän jälkeen Apache2-palvelimen aloitussivu näyttää vastaavalta:
 
 <h2> d) Laita käyttäjien kotisivut toimimaan.</h2>
 
--
+Tämän vaiheen tein puolivahingossa jo aikaisemmassa vaiheessa, niin tästäkään ei ole kuvia todistamaan prosessia.
+
+Käyttäjälle annetaan oikeus tehdä kotisivuja komennolla `sudo a2enmod userdir`, jonka jälkeen palvelin pitää taas käynnistää uudestaan komennolla `sudo systemctl restart apache2` jotta se tulee voimaan.
+
+Tämän jälkeen sain luotua kotihakemistooni uuden kansion "public_html" komennolla `mkdir public_html`, joka mahdollistaa surffaamisen osoitteeseen "127.0.0.1/~oskuh/
+
+![Kotisivuhakemisto](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/kotisivu.html.png)
 
 <h2> e) Tee validi HTML5 sivu.</h2>
 
