@@ -1,6 +1,6 @@
 <h1>Hello Web Server</h1>
 
-<h2>x)"Install Apache Web Server on Ubuntu" tiivistelmä</h2>
+<h2>x) "Install Apache Web Server on Ubuntu" tiivistelmä</h2>
 
 - Apache asennetaan paketinhallinasta komennolla `sudo apt-get install apache2`
 - Palvelinta voi selata verkossa osoitteesta "http://localhost"'
@@ -40,19 +40,34 @@ Analyysi:
 
 <h2>c) Vaihda Apachen esimerkkisivu johonkin lyheen sivuun niin, että vanha esimerkkisivu ei näy.</h2>
 
-Tätä tehtävää en osannut tehdä.
+Tätä en osannut tehdä.
 
-<h2> d) Laita käyttäjien kotisivut toimimaan</h2>
+<h2> d) Laita käyttäjien kotisivut toimimaan.</h2>
 
+-
 
+<h2> e) Tee validi HTML5 sivu.</h2>
 
+Testasin aikaisemmin luomani kotisivun validiteetin tällä verkkosivulla: https://validator.w3.org/ käyttämällä "File Upload"-vaihtoehtoa.
 
+Aluksi sain varoituksen `lang` attribuutin puuttumisesta, ja että "The character encoding was not declared", mutta nämä sain korjattua lisäämällä html-tagiin `lang="fi"`, ja lisäämällä meta-tagin `<meta charset="utf-8" />`
 
+![Validiteetti todistus](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/validiteetti.png)
 
+<h2> Anna esimerkit 'curl -I' ja 'curl' -komennoista. Analysoi 'curl -I' tuloste.</h2>
 
+`curl` komennolla tulostetaan tiedosto tekstinä komentoriville.
 
+![Curl-komento](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/curl_komento.png)
 
+`curl -i` komento tulostaa lisäksi informaatiota:
+- Date: Koska tiedosto on luotu
+- Server: Tämä liittyy jotenkin tietokoneeseen millä tiedosto on luotu, enempää en tiedä
+- Last modified: Milloin viimeksi tiedostoa on muokattu
+- eTag: Selaimen antama tunniste tiedoston lähteelle
+- Lopuista en tiedä
 
+![curl -i](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/curl_i_komento.png)
 
 
 <h2>Lähteet</h2>
