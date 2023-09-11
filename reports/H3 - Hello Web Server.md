@@ -40,7 +40,11 @@ Analyysi:
 
 <h2>c) Vaihda Apachen esimerkkisivu johonkin lyheen sivuun niin, että vanha esimerkkisivu ei näy.</h2>
 
-Tätä en osannut tehdä.
+Muutos aloitussivuun tehtiin komennolla `echo hello|sudo tee /var/www/html/index.html` jonka jälkeen käynnistin palvelimen uudestaan komennolla `sudo systemctl restart apache2`.
+
+Tämän jälkeen Apache2-palvelimen aloitussivu näyttää vastaavalta:
+
+![default page](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/lyhyt_home.png)
 
 <h2> d) Laita käyttäjien kotisivut toimimaan.</h2>
 
