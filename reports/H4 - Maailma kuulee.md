@@ -12,15 +12,24 @@
 <h2>a) Virtuaalipalvelimen vuokraus</h2>
 
 Valitsin virtuaalipalvelimeni palveluntarjoajakseni DigitalOceanin. Luodessani sinne tunnuksia käytin GitHub:in käyttäjätunnustani kirjautumiseen. 
-Tunnuksen luomisen yhteydessä vaadittiin pankkikortin lisäämistä maksuvälineeksi, ja sinne tehtiin 1.00 $ varaus kortin vahvistamiseksi.
+Tunnuksen luomisen yhteydessä vaadittiin pankkikortin lisäämistä maksuvälineeksi, ja sille tehtiin 1.00 $ varaus kortin vahvistamiseksi.
 
-DigitalOceanin etusivulla esiteltiin yleisimpä käyttötarkoituksia, ja valitsin "Host a website or static site", ja siitä seuraavalla sivulla valitsin "Debloy an Ubuntu server"
+DigitalOceanin etusivulla valitsin "Spin up a Droplet", joka on heidän käyttämä nimi virtuaalikoneelle.
+Käyttämäni valinnat:
+- Region: Frankfurt
+- Datacenter: Frankfurt - Datacenter 1 - FRA1
+- Image: Ubuntu 22.04 (LTS) x64
+- Size: Shared CPU - Basic
+- CPU: Regular - Disk type: SSD
+- Authentication method: Salasana
+
+![Droplet_luonti.png]
 
 Ota screenshot luomisesta!!
 
 <h2>b) Virtuaalipalvelimen alkutoimet</h2>
 
-Kirjauduin aluksi DigitalOceanin omaan selainkonsoliin root-tunnuksella.
+Palvelimen luonnin jälkeen, kirjauduin root-käyttäjänä terminaalin kautta.
 
 Tämän jälkeen tein nämä toimenpiteet:
 - Otin palomuurin käyttöön
@@ -29,9 +38,17 @@ Tämän jälkeen tein nämä toimenpiteet:
   - adm
   - admin
 
-Luotuani tunnukset ja annettuani sille täydet oikeudet, kokeilin ssh kirjautumista virtuaalikoneeni konsolissa. Todettuani että kirjautuminen toimii, menin takaisin DigitalOceanin selainkonsoliin sulkeakseni root-tunnuksen.
-Käytin näitä komentoja:
-`sudo usermod --lock root`
-`sudoedit /etc/ssh/sshd_config`
+Luotuani tunnukset ja annettuani sille täydet oikeudet, kokeilin ssh kirjautumista toisessa terminaalissa. Todettuani että kirjautuminen toimii, suljin root-käyttäjän mahdollisuuden kirjautua sisään.
 
-Päivityksien lomassa tapahtui jokin virhe, jonka jälkeen SSH kirjautuminen ei toiminut, käynnistin DigitalOceanin Recovery Consolen ja sen avulla sain korjattua ongelman, käyttäen tätä komentoa: laita kuva
+Käytin näitä komentoja:
+- `sudo usermod --lock root`
+- `sudoedit /etc/ssh/sshd_config`
+- `PermitRootLogin no`
+- `sudo service ssh restart`
+
+Seuraava vaihe palvelimen käyttöönotossa on tietenkin paketinhallinnan päivitykset, eli kunnon vanhat `sudo apt-get update` ja `sudo apt-get upgrade`.
+
+Päivityksen lomassa tuli vastaava virhe:
+[openssh-server]
+
+Valitsin kohdan "Keep the local version currently installed", sillä se oli valmiiksi valittu, ja ymmärtääkseni se säilyttää vain muokatun sshd_config tiedoston.
