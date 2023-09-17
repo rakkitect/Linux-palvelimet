@@ -52,3 +52,17 @@ Päivityksen lomassa tuli vastaava virhe:
 [openssh-server]
 
 Valitsin kohdan "Keep the local version currently installed", sillä se oli valmiiksi valittu, ja ymmärtääkseni se säilyttää vain muokatun sshd_config tiedoston.
+
+<h2>c) Apache-palvelimen asennus</h2>
+
+Tässä osiossa asennan vuokratulle pilvipalvelimelle Apache2 web-palvelimen.
+
+Asennus aloitetaan tietenkin päivittämällä pakettienhallinan paketit uusimpiin komennolla `sudo apt-get update`. Tämän jälkeen suoritin itse Apachen asennuksen komennolla `sudo apt-get install apache2`.
+
+Avasin Apachea varten reiän palomuuriin komennolla `sudo ufw allow 80/tcp`, jonka jälkeen sain palvelimeen yhteyden selaimessa.
+
+![Apache_default]
+
+Vaihdoin Apachen oletussivun menemällä hakemistoon `/var/www/html/` ja poistin olemassa olevan "index.html" tiedoston komennolla `sudo rm index.html`, jonka jälkeen loin uuden aloitussivun komennolla `sudo micro index.html`
+
+![julkinen_apache]
