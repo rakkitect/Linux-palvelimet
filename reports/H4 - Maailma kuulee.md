@@ -84,5 +84,16 @@ Komennolla `cat /var/log/auth.log | grep "authentication error"` sain printattua
 
 ![Authentication error](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/auth_log.png)
 
+Komennolla `journalctl -n 2000 | grep "invalid user` sain selville murtautumisyrityksissä käytettyjä käyttäjänimiä. Osa nimistä näkyi useaan otteeseen.
+
+![Journalctl](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/journalctl.png)
+
+Käytin https://www.whatismyip.com/ip-address-lookup/ ottamaan selvää mistä päin maailmaa osa murtautumisyrityksistä tuli.
+Mm.
+- Indonesia
+- Kanada
+- Englanti
+- Venäjä
+
 <h2>Lähteet</h2>
 - Karvinen T, First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS. Luettavissa:  https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/
