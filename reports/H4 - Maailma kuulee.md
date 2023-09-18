@@ -80,7 +80,7 @@ Linkki verkkosivulle on http://159.89.28.46/, jätän ne auki muutamaksi päivä
 
 Siitä hetkestä lähtien kun palvelimen kytkee verkkoon ja julkisesti saataville, on oletettavaa että sitä kohtaan kohdistuu useita murtautumisyrityksiä.
 
-Komennolla `cat /var/log/auth.log | grep "authentication error"` sain printattua suunnattoman määrän lokiin merkattuja yrityksiä. Yrityksien välillä on noin 10-20 sekuntia.
+Komennolla `cat /var/log/auth.log | grep "authentication error"` sain printattua suunnattoman määrän lokiin merkattuja yrityksiä.
 
 ![Authentication error](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/auth_log.png)
 
