@@ -9,6 +9,8 @@
   - Softan päivitys
  - Verkkotunnus on käyttäjäystävällisempi kuin pelkkä IP-osoite.
 
+(Karvinen 19.9.2017)
+
 <h2>a) Virtuaalipalvelimen vuokraus</h2>
 
 Valitsin virtuaalipalvelimeni palveluntarjoajakseni DigitalOceanin. Luodessani sinne tunnuksia käytin GitHub:in käyttäjätunnustani kirjautumiseen. 
@@ -47,7 +49,7 @@ Käytin näitä komentoja:
 - `PermitRootLogin no`
 - `sudo service ssh restart`
 
-[Root Lockout](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/root_lockout.png)
+![Root Lockout](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/root_lockout.png)
 
 Seuraava vaihe palvelimen käyttöönotossa on tietenkin paketinhallinnan päivitykset, eli kunnon vanhat `sudo apt-get update` ja `sudo apt-get upgrade`.
 
@@ -70,6 +72,8 @@ Vaihdoin Apachen oletussivun menemällä hakemistoon `/var/www/html/` ja poistin
 
 Verkkosivun toimivuutta julkisesti kokeilin toisella tietokoneella Chrome-selaimen kautta avulla.
 
+Linkki verkkosivulle on http://159.89.28.46/, jätän ne auki muutamaksi päiväksi tämän raportin julkaisun jälkeen.
+
 ![julkinen_apache](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/julkinen_apache.png)
 
 <h2>d)Merkkejä murtautumisyrityksistä</h2>
@@ -80,3 +84,5 @@ Komennolla `cat /var/log/auth.log | grep "authentication error"` sain printattua
 
 ![Authentication error](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/auth_log.png)
 
+<h2>Lähteet</h2>
+- Karvinen T, First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS. Luettavissa:  https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/
