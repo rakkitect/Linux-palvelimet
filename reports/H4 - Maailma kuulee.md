@@ -29,7 +29,7 @@ Käyttämäni valinnat:
 
 <h2>b) Virtuaalipalvelimen alkutoimet</h2>
 
-Palvelimen luonnin jälkeen, kirjauduin root-käyttäjänä terminaalin kautta.
+Palvelimen luonnin jälkeen kirjauduin root-käyttäjänä terminaalin kautta.
 
 Tämän jälkeen tein nämä toimenpiteet:
 - Otin palomuurin käyttöön
