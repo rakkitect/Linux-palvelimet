@@ -23,9 +23,7 @@ Käyttämäni valinnat:
 - CPU: Regular - Disk type: SSD
 - Authentication method: Salasana
 
-![Droplet_luonti.png]
-
-Ota screenshot luomisesta!!
+![Dropletin luominen](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/droplet_luonti.png)
 
 <h2>b) Virtuaalipalvelimen alkutoimet</h2>
 
@@ -37,6 +35,9 @@ Tämän jälkeen tein nämä toimenpiteet:
   - sudo
   - adm
   - admin
+ 
+  ![Add user](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/sudo_adduser.png)
+  ![Sudo adm, admin](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/sudo_adduser_sudo.png)
 
 Luotuani tunnukset ja annettuani sille täydet oikeudet, kokeilin ssh kirjautumista toisessa terminaalissa. Todettuani että kirjautuminen toimii, suljin root-käyttäjän mahdollisuuden kirjautua sisään.
 
@@ -46,10 +47,12 @@ Käytin näitä komentoja:
 - `PermitRootLogin no`
 - `sudo service ssh restart`
 
+[Root Lockout](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/root_lockout.png)
+
 Seuraava vaihe palvelimen käyttöönotossa on tietenkin paketinhallinnan päivitykset, eli kunnon vanhat `sudo apt-get update` ja `sudo apt-get upgrade`.
 
-Päivityksen lomassa tuli vastaava virhe:
-[openssh-server]
+Päivityksien lomassa tuli seuraava ilmoitus:
+![openssh-server](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/openssh-server.png)
 
 Valitsin kohdan "Keep the local version currently installed", sillä se oli valmiiksi valittu, ja ymmärtääkseni se säilyttää vain muokatun sshd_config tiedoston.
 
@@ -61,8 +64,19 @@ Asennus aloitetaan tietenkin päivittämällä pakettienhallinan paketit uusimpi
 
 Avasin Apachea varten reiän palomuuriin komennolla `sudo ufw allow 80/tcp`, jonka jälkeen sain palvelimeen yhteyden selaimessa.
 
-![Apache_default]
+![Apache_default](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/apache2_default.png)
 
 Vaihdoin Apachen oletussivun menemällä hakemistoon `/var/www/html/` ja poistin olemassa olevan "index.html" tiedoston komennolla `sudo rm index.html`, jonka jälkeen loin uuden aloitussivun komennolla `sudo micro index.html`
 
-![julkinen_apache]
+Verkkosivun toimivuutta julkisesti kokeilin toisella tietokoneella Chrome-selaimen kautta avulla.
+
+![julkinen_apache](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/julkinen_apache.png)
+
+<h2>d)Merkkejä murtautumisyrityksistä</h2>
+
+Siitä hetkestä lähtien kun palvelimen kytkee verkkoon ja julkisesti saataville, on oletettavaa että sitä kohtaan kohdistuu useita murtautumisyrityksiä.
+
+Komennolla `cat /var/log/auth.log | grep "authentication error"` sain printattua suunnattoman määrän lokiin merkattuja yrityksiä. Yrityksien välillä on noin 10-20 sekuntia.
+
+![Authentication error](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/auth_log.png)
+
