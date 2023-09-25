@@ -15,7 +15,6 @@
 - DNS-palvelin konfiguroidaan niin että jokainen hostname yhdistää oikeaan IP-osoitteeseen, jonka jälkeen Apache-palvelin konfiguroidaan tunnistamaan eri hostnamet.
 - Tällä tavalla saadaan säästettyä IPv4-osoitteita
 - Apache-palvelin käyttää "xxxx.conf" VirtualHost-asetustiedostoja tunnistamaan mikä on hakua parhaiten vastaava verkkosivu
-- 
 
 a) Vuokraa domain-nimi ja aseta se osoittamaan virtuaalipalvelimeesi.*
 
