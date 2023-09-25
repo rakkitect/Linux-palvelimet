@@ -16,7 +16,8 @@ Domain.comin käyttöliittymä oli melko vaikeasti suunnistettavissa, mutta pien
 
 ![DNS asetukset]
 
-Tässä vaiheessa minulle ilmoitettiin, että muutoksien voimaan tulossa saattaa mennä jopa 24-48 tuntia, joten tässä raportissa en sitä varmaan pääse todistamaan (sunnuntaina 24.09 klo 22.04)
+Seuraavana päivänä sain domain-nimeen yhteyden virtuaalikoneella, puhelimella ja tietokoneellani. Alunperin sain virhettä Forbidden 403, mutta korjasin sen komennolla `sudo chmod ugo+x / /home /home/osku /home/osku/public_html/`. Ymmärtääkseni `chmod ugo+x` muuttaa tarkennetun hakemiston suoritus/haku oikeudet niin että käyttäjät jotka eivät ole osa hakemiston käyttäjäryhmiä voivat suorittaa haun hakemistoon.
+
 
 b) Tutki oman nimesi tietoja 'host' ja 'dig' -komennoilla. Analysoi tulokset.
 
@@ -26,3 +27,7 @@ b) Tutki oman nimesi tietoja 'host' ja 'dig' -komennoilla. Analysoi tulokset.
 `dig rakkitehti.space` tulostaa paljon laajemman raportin. 
 
 c) Etusivu uusiksi. Name based virtual hosting. Laita kotisivusi näkymään oman palvelimen etusivulla. Sivujen tulee olla tallennettu jonnekin kotihakemistojen alle ja olla muokattavissa ilman sudoa.
+
+<h2>Lähteet</h2>
+
+https://linux.die.net/man/1/chmod
