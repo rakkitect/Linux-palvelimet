@@ -66,3 +66,6 @@ Lopputuloksena, muutaman mutkan jälkeen jotka johtuivat typoista, joillain lait
 
 - Die.net s.a. Linux man page. Luettavissa: https://linux.die.net/man/1/chmod
 - PhoenixNAP. How to use Linux dig Command (DNS Lookup) 1.9.2020. Luettavissa: https://phoenixnap.com/kb/linux-dig-command-examples
+- Karvinen, T 2016. New Default Website with Apache2 – Show your homepage at top of example.com, no tilde. Luettavissa: https://terokarvinen.com/2016/02/16/new-default-website-with-apache2-show-your-homepage-at-top-of-example-com-no-tilde/
+- Karvinen, T 2018. Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address. Luettavissa: https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
+- Apache Software Foundation 2023: Name-based Virtual Host Support. Luettavissa: https://httpd.apache.org/docs/2.4/vhosts/name-based.html
