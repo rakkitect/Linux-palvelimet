@@ -33,15 +33,15 @@ Seuraavaksi asennan eristetyn "virtualenv"-ympäristön komennolla `sudo apt-get
 
 Luon env/-hakemiston komennolla `virtualenv --system-site-packages -p python3 env/`, joka sisältää ajan tasalla olevat sovelluspaketit.
 
-![Virtualenv]()
+![Virtualenv](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/virtual_env.png)
 
 Virtualenv-ympäristön aktivointi tapahtuu komennolla `source env/bin/activate`, jonka jälkeen komentokehote saa alkupäätteen (env)
 
-![Alkupääte]()
+![Alkupääte](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/alkup%C3%A4%C3%A4te.png)
 
 Luon "micro"-tekstieditorilla tiedoston "requirements.txt" johon listaan tarvittavat asennuspaketit, eli tällä kertaa vain Djangon. Komentoa `pip install -r requirements.txt` käyttäen, Django asentuu virtualenv-hakemistoihin mikäli virtualenv on aktiivinen. Komennolla `django-admin --version` tarkistamme että saamamme versio on uusin, eli raportin julkaisuaikana 4.2.5
 
-![requirements.txt]()
+![requirements.txt](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/requirements.png)
 
 Loin Django-projektini nimellä "Oskuco" komennolla `django-admin startproject oskuco`.
 
@@ -50,13 +50,13 @@ Palvelin käynnistetään näin:
 $ cd oskuco
 $ ./manage.py runserver
 ```
-![Runserver]()
+![Runserver](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/runserver.png)
 
 Punaisella tekstillä näkyvä teksti johtuu luullakseni siitä että tietokantoja ei ole päivitetty. Se korjataan seuraavan vaiheen jälkeen.
 
 Käynnistettyäni palvelimen, otin siihen yhteyden selaimella syöttämällä URL:in http://127.0.0.1:8000/
 
-![Django interface]()
+![Django interface](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/django_interface.png)
 
 Tietokannat päivitetään komennolla `.manage.py migrate`
 ```
@@ -64,17 +64,41 @@ $ ./manage.py makemigrations
 $ ./manage.py migrate
 ```
 
-![Migration]()
+![Migration](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/migrations.png)
 
-Nyt voin lisätä admin-käyttöliittymän. Sitä varten tarvitsen admin-käyttäjän. Aloitan tunnusten luonnin asentamalla salasana-generaattorin komennolla `sudo apt-get install pwgen`. Komennolla `pwgen -s 20 1` sovellus luo yhden 20 merkkiä pitkän satunnaisen salasanan.
+<h2>b) Yksinkertainen esimerkkitietokanta Django-kehitysympäristöön ja niiden muokkaus admin-käyttöliittymässä</h2>
+
+Edellisen vaiheen jälkeen voin lisätä admin-käyttöliittymän. Sitä varten tarvitsen admin-käyttäjän. Aloitan tunnusten luonnin asentamalla salasana-generaattorin komennolla `sudo apt-get install pwgen`. Komennolla `pwgen -s 20 1` sovellus luo yhden 20 merkkiä pitkän satunnaisen salasanan.
 
 Superuser-käyttäjä luodaan komennolla `./manage.py createsuperuser`. Tunnusten luonnissa kysytään tunnuksen nimeä, sähköpostia ja salasanaa. Sähköposti ei ollut pakollinen, ja itse jätin sen tyhjäksi (saa nähdä seuraako tästä ongelmia myöhemmin)
 
-Luomallani tunnuksella pääsin kirjautumaan palvelimen admin-käyttöliittymään osoitteessa http://127.0.0.1:8000/admin/.
+Tietokannan luominen alkaa komennolla `./manage.py startapp crm` joka luo kansion crm/ jonne asennetaan Customer Relationship Management sovellus. Asennus pitää lisätä Pythonin asetus-tiedostoon komennolla `micro oskuco/settings.py`. Lisätty rivi on korostettu:
 
-Loin toisen tunnuksen staff -ja superuser oikeuksilla käyttöliittymän välityksellä.
+![crm](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/crm.png)
 
-![add user]()
+Tämän jälkeen komennolla `micro crm/models.py ` voin tuoda "Customer"-taulun lisäämällä Python-tiedostoon halutut speksit:
+
+![Database](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/database.png)
+
+Siirtäessäni juuri luomaani tietokantaa palvelimelleni, tuli `./manage.py makemigrations`-komennon yhteydessä virheilmoitus puuttuvasta "("-merkistä "Customer"-taulussa. Korjauksen jälkeen migraatio sujui ongelmitta.
+
+![database_migration](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/database_migration.png)
+
+Luomisen jälkeen tietokanta pitää rekisteröidä, jotta sen näkee admin-käyttöliittymässä. Muutos tehdään Microlla `admin.py`-tiedostoon.
+
+![register](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/register.png)
+
+Rekisteröinnin jälkeen tietokanta tulee näkyviin:
+
+![CRM_database](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/crm_database.png)
+
+Saan lisättyä asiakkaita tietokantaan admin-käyttöliittymän kautta painamalla "Add customer +" painiketta CRM-näkymän yläreunasta. Kuvassa näkyy jo kaksi kappaletta luomiani rivejä.
+
+![customers](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/customer.png)
+
+<h2>c) Tee Djangon tuotantotyyppinen asennus omalle, paikalliselle virtuaalikoneellesi. Siis sellainen, joka pyörii Apachella. Tämä tehtävä on hieman haastavampi.</h2>
+
+Valitettavasti tämä tehtävä jäi omalta osaltani tekemättä ajanpuutteen takia.
 
 
 <h2>Lähteet</h2>
