@@ -27,6 +27,54 @@
 
 <h2>a) Asenna Django-kehitysympäristö niin, että näet './manage.py runserver' esimerkkisivun.</h2>
 
+Ennen mitään asennuksia, aloitan päivittämällä paketin hallinnan: `sudo apt-get update`, sekä päivitän jo asennetut paketit: `sudo apt-get upgrade`.
+
+Seuraavaksi asennan eristetyn "virtualenv"-ympäristön komennolla `sudo apt-get -y install virtualenv`.
+
+Luon env/-hakemiston komennolla `virtualenv --system-site-packages -p python3 env/`, joka sisältää ajan tasalla olevat sovelluspaketit.
+
+![Virtualenv]()
+
+Virtualenv-ympäristön aktivointi tapahtuu komennolla `source env/bin/activate`, jonka jälkeen komentokehote saa alkupäätteen (env)
+
+![Alkupääte]()
+
+Luon "micro"-tekstieditorilla tiedoston "requirements.txt" johon listaan tarvittavat asennuspaketit, eli tällä kertaa vain Djangon. Komentoa `pip install -r requirements.txt` käyttäen, Django asentuu virtualenv-hakemistoihin mikäli virtualenv on aktiivinen. Komennolla `django-admin --version` tarkistamme että saamamme versio on uusin, eli raportin julkaisuaikana 4.2.5
+
+![requirements.txt]()
+
+Loin Django-projektini nimellä "Oskuco" komennolla `django-admin startproject oskuco`.
+
+Palvelin käynnistetään näin:
+```
+$ cd oskuco
+$ ./manage.py runserver
+```
+![Runserver]()
+
+Punaisella tekstillä näkyvä teksti johtuu luullakseni siitä että tietokantoja ei ole päivitetty. Se korjataan seuraavan vaiheen jälkeen.
+
+Käynnistettyäni palvelimen, otin siihen yhteyden selaimella syöttämällä URL:in http://127.0.0.1:8000/
+
+![Django interface]()
+
+Tietokannat päivitetään komennolla `.manage.py migrate`
+```
+$ ./manage.py makemigrations
+$ ./manage.py migrate
+```
+
+![Migration]()
+
+Nyt voin lisätä admin-käyttöliittymän. Sitä varten tarvitsen admin-käyttäjän. Aloitan tunnusten luonnin asentamalla salasana-generaattorin komennolla `sudo apt-get install pwgen`. Komennolla `pwgen -s 20 1` sovellus luo yhden 20 merkkiä pitkän satunnaisen salasanan.
+
+Superuser-käyttäjä luodaan komennolla `./manage.py createsuperuser`. Tunnusten luonnissa kysytään tunnuksen nimeä, sähköpostia ja salasanaa. Sähköposti ei ollut pakollinen, ja itse jätin sen tyhjäksi (saa nähdä seuraako tästä ongelmia myöhemmin)
+
+Luomallani tunnuksella pääsin kirjautumaan palvelimen admin-käyttöliittymään osoitteessa http://127.0.0.1:8000/admin/.
+
+Loin toisen tunnuksen staff -ja superuser oikeuksilla käyttöliittymän välityksellä.
+
+![add user]()
 
 
 <h2>Lähteet</h2>
