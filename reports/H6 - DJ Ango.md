@@ -98,7 +98,7 @@ Saan lisättyä asiakkaita tietokantaan admin-käyttöliittymän kautta painamal
 
 <h2>c) Tee Djangon tuotantotyyppinen asennus omalle, paikalliselle virtuaalikoneellesi. Siis sellainen, joka pyörii Apachella. Tämä tehtävä on hieman haastavampi.</h2>
 
-Valitettavasti tämä tehtävä jäi omalta osaltani tekemättä ajanpuutteen takia.
+Valitettavasti tämä tehtävä jäi omalta osaltani tekemättä ajanpuutteen takia, mutta aion sen toteuttaa paremmalla ajalla.
 
 
 <h2>Lähteet</h2>
