@@ -21,6 +21,10 @@
 
 <h2>b) Käännä "Hei maailma" jollain muulla kielellä (kuin Python, Java, C).</h2>
 
+Tässä tehtävässä minun pitää asentaa kääntäjät (compiler) Pythonia, Javaa ja C:tä varten, joten ensimmäisenä päivitän paketinhallinan sekä asennetut paketit komennoilla `sudo apt-get update` ja `sudo apt-get upgrade`. Edeltävä komento päivittää paketinhallinan valikoiman uusimpiin versioihin, ja jälkimmäinen lataa päivitykset Linux-ympäristööni asennettuihin paketteihin.
+
+Koneellani oli valmiiksi jo kääntäjät C:lle ja Pythonille, mutta asennukset olisin tehnyt komennoilla `sudo apt-get install python3` ja `sudo apt-get install gcc`. Javaa varten en ollut asentanut kääntäjää, joten sen asensin komennolla `sudo apt-get install default-jdk`. Löysin tarvittavan paketin komennolla `sudo apt-cache jdk`. "JDK" on lyhenne sanoista Java Development Kit, jonka mukana tulee kääntäjä ja yleisimmät luokka kirjastot (class libraries).
+
 <h2>c) Esittele Pythonin käyttöä interaktiivisena taskulaskimena. Voit käyttää myös Jupyteria, eli ipython3-liittymää.</h2>
 
 <h2>d) Tee shell script.</h2>
