@@ -17,39 +17,59 @@
 - Ohjelmointikielet löytyvät Linuxilla paketinhallinnasta komennolla `apt-get`
 
 
-<h2>a) Käännä "Hei maailma" Pythonilla, Javalla ja C-kielellä. (Kirjoita lähdekoodi erilliseen tiedostoon, vaikka Pythonissa onkin interaktiivinen tulkki [REPL]).</h2>
+<h2>a) "Hello World" Pythonilla, Javalla ja C:llä</h2>
 
 Tässä tehtävässä minun pitää asentaa kääntäjät (compiler) Pythonia, Javaa ja C:tä varten, joten ensimmäisenä päivitän paketinhallinan sekä asennetut paketit komennoilla `sudo apt-get update` ja `sudo apt-get upgrade`. Edeltävä komento päivittää paketinhallinan valikoiman uusimpiin versioihin, ja jälkimmäinen lataa päivitykset Linux-ympäristööni asennettuihin paketteihin.
 
-Koneellani oli valmiiksi jo kääntäjät C:lle ja Pythonille, mutta asennukset olisin tehnyt komennoilla `sudo apt-get install python3` ja `sudo apt-get install gcc`. Javaa varten en ollut asentanut kääntäjää, joten sen asensin komennolla `sudo apt-get install default-jdk`. Löysin tarvittavan paketin komennolla `sudo apt-cache jdk`. "JDK" on lyhenne sanoista Java Development Kit, jonka mukana tulee kääntäjä ja yleisimmät luokka kirjastot (class libraries).
+Koneellani oli valmiiksi jo kääntäjät C:lle ja Pythonille, mutta asennukset olisin tehnyt komennoilla `sudo apt-get install python3` ja `sudo apt-get install gcc`. Javaa varten en ollut asentanut kääntäjää, joten sen asensin komennolla `sudo apt-get install default-jdk`. Löysin tarvittavan paketin komennolla `sudo apt-cache jdk`. "JDK" on lyhenne sanoista Java Development Kit, jonka mukana tulee kääntäjä ja yleisimmät luokka kirjastot (class libraries) (Tyson, M 2022).
 
 <h3>Python3:</h3>
+
 - Loin hello.py tiedoston "Micro"-tekstieditorilla käyttäen komentoa `micro hello.py`
 - Koodi pyöritetään komennolla `python3 hello.py`
+
 ![Hello World Pythonilla](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/hello_python.png)
   
 <h3>Java:</h3>
+
 - Loin hello.java tiedoston "Micro"-tekstieditorilla käyttäen komentoa `micro hello.java`
 - Javalla on tärkeää että tiedoston nimi on sama kuin koodissa oleva luokka, joten tiedoston ollessa "hello.java" nimesin luokan myös "hello"
-  - Tämä on "case sensitive", eli kirjainkoolla on väliä.
+  - Tämä on "case sensitive", eli kirjainkoolla on väliä
 - Tiedoston luonnin jälkeen, koodi piti vielä kääntää komennolla `javac hello.java`
 - Tämän jälkeen pystyin pyörittää koodin terminaalissa komennolla `java hello`
+
 ![Hello World Javalla](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/hello_java.png)
 
 <h3>C:</h3>
+
 - Loin hello.c tiedoston "Micro"-tekstieditorilla käyttäen komentoa `micro hello.c`
 - Kun koodi on kirjoitettu, se pitää kääntää komennolla `gcc hello.c -o helloc`
-  - `-o helloc`
+
+![Hello World C:llä](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/hello_c.png)
  
 <h2>b) Käännä "Hei maailma" jollain muulla kielellä (kuin Python, Java, C).</h2>
 
 Päätiin tehdä tämän tehtävän vielä bash-kielellä, koska ymmärtääkseni se on hyödyllinen ohjelmointikieli tietoverkkojen kanssa työskennellessä:
 - Kooditiedoston kirjoitin komennolla `micro hello.sh`
 - Bash-komentoa ei tarvinnut erikseen kääntää, vaan pystyin heti ajamaan sen komennolla `bash hello.sh`
-![Hello World Bashilla]()
+
+![Hello World Bashilla](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/hello_bash.png)
+
+Lopuksi vielä kuinka pyörittää koodi kaikilla mainituilla kielillä:
+
+![Hello World Pythonilla, Javalla, C:llä ja Bashilla](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/hello_kaikki.png)
 
 
 <h2>c) Esittele Pythonin käyttöä interaktiivisena taskulaskimena. Voit käyttää myös Jupyteria, eli ipython3-liittymää.</h2>
+
+Pythonia voi käyttää myös laskimena terminaalin sisällä. Pythonin käynnistys onnistuu komennolla `Python3` jonka jälkeen voit syöttää suoritettavan koodin.
+
+![Pythonin käyttö laskimena](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/python_laskin.png)
+
+Pythonin laskennalliset toiminnot:
+
+<img src="https://github.com/rakkitect/Linux-palvelimet/blob/main/images/python_laskin_hommat.png" width="600">
+
 
 <h2>d) Tee shell script.</h2>
 
