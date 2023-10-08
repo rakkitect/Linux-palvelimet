@@ -73,7 +73,29 @@ Pythonin laskennalliset toiminnot:
 
 <h2>d) Tee shell script.</h2>
 
+Tähän tehtävään tein Bashilla scriptin, joka kertoo onko syöttämäsi numero pariton vai parillinen. Loin shell-scriptin komennolla `micro pariton.sh`.
+
+![Scripti joka kertoo onko syötetty numero pariton vai parillinen](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/shell_script.png)
+
+- Ensimmäinen rivi on shebang-merkintä, joka määrittää että scripti on tarkoitus suorittaa Bash:ia käyttäen (Wikipedia)
+  - Myöhemmässä vaiheessa muokkasin tätä riviä vielä niin että shebang on `#!/usr/bin/bash`
+
 <h2>e) Tee uusi komento Linuxiin. Osoita, että se toimii kaikilla käyttäjillä ja ilman, että tarvitsee kirjoittaa polkua tuohon komentoon. (Voit käyttää esimerkkiohjelmana äsken tekemääsi shell scriptiä)</h2>
+
+Jotta voin muuttaa äsken tekemäni scriptin komennoksi, pitää minun ensin antaa kaikille käyttäjille oikeudet ajaa se. Tämä onnistuu komennolla `chmod ugo+rx pariton.sh`.
+
+Alunperin tein scriptin oman käyttäni kotihakemistoon, mutta kopioin sen komennolla `sudo cp pariton.sh /usr/local/bin/` hakemistoon jotta muut käyttäjät pääsevät siihen myös käsiksi.
+
+Tein scriptistä komennon käyttämällä `alias` komentoa. Se luo oikotien määräämääsi komentoon. Minun tilanteessani käytin komentoa `alias nro=bash /usr/local/bin/pariton.sh`. Tällöin kirjoittamalla "nro" ja painamalla enteriä, tekemäni scripti pyörii.
+
+Tässä vaiheessa komento `nro` ei kuitenkaan toiminut luomallani testikäyttäjällä, ja ideoita sen korjaamiseksi ei ole.
+
+Tässä scriptin koodi ja /etc/profile -tiedostoon luomani alias komento.
+
+![Koodi](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/pariton.png)
+![Profile alias](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/profile.png)
+![Ei toimi](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/ei_toimi.png)
+
 
 <h2>f) Intelligent intelligence. Ratkaise vanha arvioitava laboratorioharjoitus tältä kurssilta. Saa soveltaaa. Jos harjoituksessa on kohtia, jotka ovat liian vaikeita tai kovin erilaisia kuin tällä toteutuksella opetetut, voit vaihtaa ne sopivampaan tai jopa hypätä niiden yli.</h2>
 
@@ -89,3 +111,4 @@ Pythonin laskennalliset toiminnot:
 
 - Karvinen, T 2018. Hello World Python3, Bash, C, C++, Go, Lua, Ruby, Java – Programming Languages on Ubuntu 18.04. Luettavissa: https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/
 - Tyson, M 2022. What is the JDK? Introduction to the Java Development Kit. Luettavissa: https://www.infoworld.com/article/3296360/what-is-the-jdk-introduction-to-the-java-development-kit.html. Luettu 07.10.2023
+- Wikipedia s.a. Shebang (Unix). Luettavissa: https://fi.wikipedia.org/wiki/Shebang_(Unix). Luettu: 08.10.2023
