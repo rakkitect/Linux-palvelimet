@@ -11,6 +11,8 @@
 
 <h2>y) Lue ja tiivistä</h2>
 
+Karvinen 2018: https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/
+
 - `Hello World!` on yleinen tapa testata ohjelmointikielen toimivuus.
 - Itselleni relevantit kielet lienee: Python 3, Java, C
   - Nämä sen takia, että mielenkiintoni raportin kirjoitushetkellä kohdentuu kyberturvallisuuteen
@@ -47,7 +49,7 @@ Koneellani oli valmiiksi jo kääntäjät C:lle ja Pythonille, mutta asennukset 
 
 ![Hello World C:llä](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/hello_c.png)
  
-<h2>b) Käännä "Hei maailma" jollain muulla kielellä (kuin Python, Java, C).</h2>
+<h2>b) "Hello World!" bash:illa.</h2>
 
 Päätiin tehdä tämän tehtävän vielä bash-kielellä, koska ymmärtääkseni se on hyödyllinen ohjelmointikieli tietoverkkojen kanssa työskennellessä:
 - Kooditiedoston kirjoitin komennolla `micro hello.sh`
@@ -60,7 +62,7 @@ Lopuksi vielä kuinka pyörittää koodi kaikilla mainituilla kielillä:
 ![Hello World Pythonilla, Javalla, C:llä ja Bashilla](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/hello_kaikki.png)
 
 
-<h2>c) Esittele Pythonin käyttöä interaktiivisena taskulaskimena. Voit käyttää myös Jupyteria, eli ipython3-liittymää.</h2>
+<h2>c) Python-taskulaskin</h2>
 
 Pythonia voi käyttää myös laskimena terminaalin sisällä. Pythonin käynnistys onnistuu komennolla `Python3` jonka jälkeen voit syöttää suoritettavan koodin.
 
@@ -80,7 +82,7 @@ Tähän tehtävään tein Bashilla scriptin, joka kertoo onko syöttämäsi nume
 - Ensimmäinen rivi on shebang-merkintä, joka määrittää että scripti on tarkoitus suorittaa Bash:ia käyttäen (Wikipedia)
   - Myöhemmässä vaiheessa muokkasin tätä riviä vielä niin että shebang on `#!/usr/bin/bash`
 
-<h2>e) Tee uusi komento Linuxiin. Osoita, että se toimii kaikilla käyttäjillä ja ilman, että tarvitsee kirjoittaa polkua tuohon komentoon. (Voit käyttää esimerkkiohjelmana äsken tekemääsi shell scriptiä)</h2>
+<h2>e) Tee uusi komento Linuxiin</h2>
 
 Jotta voin muuttaa äsken tekemäni scriptin komennoksi, pitää minun ensin antaa kaikille käyttäjille oikeudet ajaa se. Tämä onnistuu komennolla `chmod ugo+rx pariton.sh`.
 
@@ -97,18 +99,53 @@ Tässä scriptin koodi ja /etc/profile -tiedostoon luomani alias komento.
 ![Ei toimi](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/ei_toimi.png)
 
 
-<h2>f) Intelligent intelligence. Ratkaise vanha arvioitava laboratorioharjoitus tältä kurssilta. Saa soveltaaa. Jos harjoituksessa on kohtia, jotka ovat liian vaikeita tai kovin erilaisia kuin tällä toteutuksella opetetut, voit vaihtaa ne sopivampaan tai jopa hypätä niiden yli.</h2>
+<h2>f) Intelligent intelligence. Ratkaise vanha arvioitava laboratorioharjoitus.</h2>
+
+- 
 
 <h2>g) Asenna arvioitavaa laboratorioharjoitusta varten itsellesi uusi tyhjä virtuaalikone. Suosittelen Debian 12-Bookworm, amd64. Koneella saa halutessasi olla paketit päivitettynä ja palomuuri asennettuna. Koneella ei saa olla näiden lisäksi muita asetuksia ja ohjelmia kuin ne, jotka tulivat tavalliesn asennuksen yhteydessä. Katso, että koneella on toimiva nettiyhteys, riittävästi kovalevytilaa ja RAM-muistia. Virtuaalikoneella ei saa olla luottamuksellisia tietoja.</h2>
 
-<h2>h) Vapaaehtoinen: Tee Linxuiin uusi komento Pythonilla.</h2>
+Asennan labraharjoitusta varten Debian 12.2-Bookworm-imagella varustetun virtuaalikoneen. Imagen latasin täältä: https://www.debian.org/releases/bookworm/debian-installer/. Valitsin netinst amd64 CD imagen.
 
-<h2>i) Vapaaehtoinen: Tee Linxuiin uusi komento Javalla. Voit käyttää shell scriptiä käynnistämään java-ohjelmasi, 'cd /opt/iloveobjects/; java ILoveObjects'.</h2>
+Muistin määräksi asetin 4096 MB, ja prosessorien määrän asetin 4:ään. Loin uuden virtuaalikovalevyn ja määritin sille 20GB muistia.
 
-<h2>j) Vapaaehtoinen: Tee Linuxiin uusi komento jollain muulla kielellä kuin Javalla tai Pythonilla.</h2>
+![Asennus1](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/asennus1.png)
+![Asennus2](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/asennus2.png)
+![Asennus3](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/asennus3.png)
+
+Käynnistettyäni virtuaalikoneen, alkoi asennusprosessi.
+
+Asennuksen käyttöliittymä oli hieman erilainen kuin aiemmin asentamani Debian 12.1.0.
+
+Valitsin kieleksi englannin, lokaatioksi United States, ja näppäimistöksi suomalaisen näppäimistön.
+
+Näiden valintojen jälkeen loin root-käyttäjän sekä peruskäyttäjän ilman admin-oikeuksia.
+
+Lisäksi minun piti määritellä haluamani levyn osiointi (partition). Valitsin tähän käytettäväksi koko kovalevyn, sekä että kaikki tiedostot olisivat yhdellä osiolla. Mikäli kone olisi tulossa itselleni päivittäiseen käyttöön, olisin mahdollisesti erottanut ainakin /home-hakemiston omaan osioonsa.
+
+![Osiot](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/osiot.png)
+
+Tämän jälkeen käyttöjärjestelmä jatkoi asennusta, ja n. 5sek jälkeen minulta kysyttiin mistä haluan peilata(?) paketinhallinnan. Valitsin Suomen, ja paketinhallinnaksi deb.debian.org:in. Luulen että tässäkin olisi suositeltavaa valita joku muu maa mikäli kone tulisi pitkäaikaiseen käyttöön.
+
+![Paketinhallinta valikko](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/package_manager.png)
+
+Lopuksi minulta kysyttiin vielä valinnaisten softien asennusta, mutta koneen ollessa laboratorioharjoituskäytössä jätin asentamatta mitään ylimääräistä.
+
+![Softa valinnat](https://github.com/rakkitect/Linux-palvelimet/blob/main/images/softa_valinnat.png)
+
+Tämän jälkeen sovelluspakettien latauksessa ja asennuksessa meni n.2min, jonka jälkeen minulta kysyttiin haluanko asentaa GRUB boot loaderin. Tämä oli oletuksena valittuna, joten valitsin kyllä.
+
+Kaiken tämän jälkeen pääsin vihdoinkin kirjautumaan tunnuksillani sisään. Avaamalla Firefox-selaimen totesin että verkkoyhteys toimii. Yritin myös päivittää paketinhallinnan vain todetakseni että käyttäjältäni puuttuu sudo-oikeudet. Tämän korjasin vaihtamalla itseni root-käyttäjäksi, ja lisäämällä käyttäjäni sudo-ryhmään komennolla `usermod -aG sudo osku`.
+
+Kun ryhmään lisäys tuli voimaan, päivitin paketinhallinnan ja asennetut paketit komennoilla `sudo apt-get update` ja `sudo apt-get upgrade`.
+
+Palomuurin asensin komennolla `sudo apt-get install ufw -y` ja otin sen käyttöön komennolla `sudo ufw enable`.
+
+Nyt virtuaalikoneen pitäisi olla valmis laboratorioharjoitusta varten.
 
 <h2>Lähteet</h2>
 
-- Karvinen, T 2018. Hello World Python3, Bash, C, C++, Go, Lua, Ruby, Java – Programming Languages on Ubuntu 18.04. Luettavissa: https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/
+- - Debian s.a. Installing Debian 12.2. https://www.debian.org/releases/bookworm/debian-installer/
+- Karvinen, T 2018. Hello World Python3, Bash, C, C++, Go, Lua, Ruby, Java – Programming Languages on Ubuntu 18.04. Luettavissa: https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/. Luettu 07.10.2023
 - Tyson, M 2022. What is the JDK? Introduction to the Java Development Kit. Luettavissa: https://www.infoworld.com/article/3296360/what-is-the-jdk-introduction-to-the-java-development-kit.html. Luettu 07.10.2023
 - Wikipedia s.a. Shebang (Unix). Luettavissa: https://fi.wikipedia.org/wiki/Shebang_(Unix). Luettu: 08.10.2023
